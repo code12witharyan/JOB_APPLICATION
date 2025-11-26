@@ -15,7 +15,7 @@ const NavBar = () => {
                     user ? <div className='flex items-center gap-4'>
                         <Link to ={'application'}>Applied Jobs</Link>
                         <p>|</p>
-                        <p>Hello, {user.firstName}</p>
+                        <p className ='max-sm:hidden'>Hello, {user.firstName}</p>
                         <UserButton />
                     </div> : <div className='flex gap-6 items-center'>
                         <button className='text-grey-600'>Recruiter Login</button>
