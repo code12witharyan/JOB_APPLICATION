@@ -9,7 +9,7 @@ import { createContext , useEffect, useState } from 'react';
                 { title :'',
                   location :'' 
                 }
-            )
+            ) 
 
             const [isSearched, setIsSearched] = useState(false)
 
@@ -29,7 +29,7 @@ import { createContext , useEffect, useState } from 'react';
         useEffect(()=>{
             fetchJobs()
         },[])
-        
+
         return (
             <AppContext.Provider  value={value}>
                 {props.children}
