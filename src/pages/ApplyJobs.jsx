@@ -8,6 +8,7 @@ import NavBar from '../components/NavBar.jsx';
 import kconvert from 'k-convert';
 import moment from 'moment';
 import JobCard from '../components/JobCard.jsx';
+import Footer from '../components/footer.jsx';
 
 function ApplyJobs() {
 
@@ -113,7 +114,7 @@ function ApplyJobs() {
 
               <div className='flex flex-col gap-4'>
                 {jobs
-                  .filter(job => job._id !== JobData._id && job.companyId._id === JobData.companyId._id)
+                  .filter(job => job._id !== JobData._id && job.companyId._id === JobData.companyId._id).filter(job=>true)
                   .slice(0, 4)
                   .map((job, index) => (
                     <JobCard key={index} job={job} />
@@ -127,7 +128,9 @@ function ApplyJobs() {
         </div>
 
       </div>
+        <Footer />
     </>
+  
   ) : (
     <Loading />
   );
