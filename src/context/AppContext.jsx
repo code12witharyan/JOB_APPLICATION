@@ -14,11 +14,12 @@ import { createContext , useEffect, useState } from 'react';
             const [isSearched, setIsSearched] = useState(false)
 
             const [jobs, setJobs] = useState([])
+            const [showRecruiterLogin, setShowRecruiterLogin]=useState(false)
 
         const value ={
             setSearchFilter, searchFilter
             , isSearched, setIsSearched,
-            jobs, setJobs
+            jobs, setJobs,showRecruiterLogin, setShowRecruiterLogin
         }
 
         // function to fetch job data

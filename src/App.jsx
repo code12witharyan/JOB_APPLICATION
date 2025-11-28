@@ -4,10 +4,17 @@ import {Route, Routes} from 'react-router-dom'
 import Home from './pages/Home.jsx'
 import ApplyJobs from './pages/ApplyJobs.jsx'
 import Application from './pages/Application.jsx'
+import Recruiter from './components/Recruiter.jsx'
+import { useContext } from 'react'
+import { AppContext } from './context/AppContext.jsx'
+//
+
 
 function App() {
+  const {showRecruiterLogin} = useContext(AppContext)
   return (
     <div>
+      {showRecruiterLogin && <Recruiter/>}
     <Routes>
      <Route path='/' element={<Home/>}/>
      <Route path='/apply-job/:id' element={<ApplyJobs/>}/>
